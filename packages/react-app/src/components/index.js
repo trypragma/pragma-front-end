@@ -1,19 +1,22 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-  background-color: #282c34;
+  background-color: #FFFFFF;
+  /* background-color: #282c34; */
   min-height: 70px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  color: white;
+  justify-content: space-between;
+  color: black;
+  border-bottom: 1px solid #F2F2F2;
 `;
 
 export const Body = styled.div`
   align-items: center;
-  background-color: #282c34;
-  color: white;
+  /* background-color: #282c34; */
+  /* color: white; */
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
@@ -37,7 +40,7 @@ export const Link = styled.a.attrs({
 
 export const Button = styled.button`
   background-color: white;
-  border: none;
+  border: 1px solid grey;
   border-radius: 8px;
   color: #282c34;
   cursor: pointer;
@@ -51,4 +54,10 @@ export const Button = styled.button`
     border: none;
     outline: none;
   }
+`;
+
+export const Logo = styled.h1`
+  font-size: 24px;
+  margin: 0px 20px;
+  padding: 12px 24px;
 `;
