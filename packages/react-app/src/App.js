@@ -12,6 +12,10 @@ import Box from '@mui/material/Box';
 
 import { addresses, abis } from "@project/contracts";
 import GET_TRANSFERS from "./graphql/subgraph";
+// import { Router } from "react-router-dom";
+import MainRouter from "./Router";
+// const { NotionClient } = require("@notionhq/client")
+
 
 async function readOnChainData() {
   // Should replace with the end-user wallet, e.g. Metamask
@@ -81,28 +85,21 @@ function App() {
     if (!loading && !error && data && data.transfers) {
       console.log({ transfers: data.transfers });
     }
+    // const notion = new NotionClient({
+    //   auth: process.env.NOTION_TOKEN,
+    // })
+
+    // fetch("https://potion-api.now.sh/table?id=2364751436224832ba85e279417ea798")
+    // .then(res => res.json())
+    // .then(json => {
+    //   console.log(json)
+    // })
+
   }, [loading, error, data]);
 
   return (
     <div>
-      <Header>
-        <Logo>Pragma.</Logo>
-        <HeaderTabs/>
-        <WalletButton provider={provider} loadWeb3Modal={loadWeb3Modal} logoutOfWeb3Modal={logoutOfWeb3Modal} />
-      </Header>
-      <Body>
-        {/* Two Column Layout. */}
-        {/* <Box sx={{ display: 'flex' }}> */}
-          <DomeCard/>
-          <DomeCard/>
-        {/* </Box> */}
-
-        {/* <Box sx={{ display: 'flex' }}> */}
-          <DomeCard/>
-          <DomeCard/>
-        {/* </Box> */}
-
-      </Body>
+      <MainRouter/>
     </div>
   );
 }

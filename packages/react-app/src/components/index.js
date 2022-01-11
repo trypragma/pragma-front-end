@@ -16,7 +16,7 @@ export const Body = styled.div`
   align-items: center;
   /* background-color: #282c34; */
   /* color: white; */
-  margin-top: 2em;
+  margin-bottom: 2em;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
