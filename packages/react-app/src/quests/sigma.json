@@ -1,0 +1,11 @@
+{
+    "name": "Sigma Dome",
+    "version": 1.0,
+    "tableOfContent": [
+        "Introduction",
+        "WTF Solidity",
+        "First Smart Contract",
+        "Testnet Deployment",
+        "Front End"
+    ]
+}

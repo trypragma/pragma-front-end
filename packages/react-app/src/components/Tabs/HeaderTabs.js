@@ -36,9 +36,9 @@ export default function HeaderTabs() {
           <HeaderTab value="earn" label="Earn"/>
         </Link>
 
-         <Link to="/earn" style={{ textDecoration: 'none', color: 'black' }}>
+         {/* <Link to="/earn" style={{ textDecoration: 'none', color: 'black' }}>
           <HeaderTab value="earn" label="Bounties"/>
-        </Link>
+        </Link> */}
 
       </TabContainer>
     </TBoxContainer>

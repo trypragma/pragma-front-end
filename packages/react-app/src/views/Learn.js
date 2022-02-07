@@ -19,16 +19,9 @@ export default function Learn() {
             <li style={{ textAlign: 'center' }}>0 - 3 months</li>
             <li style={{ textAlign: 'center' }}>3 - 6 months</li>
             <li style={{ textAlign: 'center' }}>6 - 12 months</li>
+            <li style={{ textAlign: 'center' }}>Front End</li>
             <li style={{ textAlign: 'center' }}>Clean Code</li>
             <li style={{ textAlign: 'center' }}>Security</li>
-            
-            {/* <div style={{ display: "flex" }}>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: "wrap", alignItems: 'center', justifyContent: 'center'}}>
-                {filteredData ? filteredData.map((e) => {
-                    return (<LearnCards data={e}/>)
-                }) : null}
-            </div>
-            </div> */}
             
         </Body>
     )
