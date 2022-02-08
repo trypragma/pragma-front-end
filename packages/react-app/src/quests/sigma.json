@@ -2,7 +2,7 @@
     "name": "Sigma Dome",
     "version": 1.0,
     "tableOfContent": [
-        "Introduction",
+        "Setup",
         "WTF Solidity",
         "First Smart Contract",
         "Testnet Deployment",

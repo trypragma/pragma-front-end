@@ -22,7 +22,7 @@ export default function MainRouter() {
       <div>
         <Switch>
             <Route path="/earn" component={Domes} />
-            <Route path="/quests/:id" component={Quests}/>
+            <Route path="/quests/:id/" component={Quests}/>
             <Route path="" component={Learn} />
         </Switch>
       </div>

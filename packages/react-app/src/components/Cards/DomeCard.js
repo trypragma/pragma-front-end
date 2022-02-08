@@ -18,7 +18,7 @@ export default function DomeCard({data}) {
       <Grid item>
         <DomeCardContainer sx={{ width: 250, height: "100%", alignSelf: "center" }}>
           <CardContent>
-            <img alt={data.id} src={data.img} width={"100%"} />
+            <img alt={data.id} src={data.img} width={"100%"} height={200} />
             <Typography sx={{ mb: 2 }} color="text.secondary" >
               {data.id} Dome
             </Typography>
