@@ -17,7 +17,7 @@ import {
 
 export default function EnterCard({enabled, id, data}) {
   return (
-      <Link to={enabled ? `/quests/${id}` :'#'}>
+      <Link to={enabled ? `/quests/${id}/` :'#'}>
             <CardActionsContainer enabled={enabled}> 
               <Button style={{color: 'white'}} size="small">{enabled ? "Enter" : "Coming Soon"}</Button>
             </CardActionsContainer>

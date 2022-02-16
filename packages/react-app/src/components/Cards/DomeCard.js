@@ -16,9 +16,9 @@ import EnterCard from './Entercard';
 export default function DomeCard({data}) {
   return (
       <Grid item>
-        <DomeCardContainer sx={{ width: 250, height: "100%", alignSelf: "center" }}>
+        <DomeCardContainer sx={{ width: 350, height: 450, alignSelf: "center" }}>
           <CardContent>
-            <img alt={data.id} src={data.img} width={"100%"} height={200} />
+            <img alt={data.id} src={data.img} width={"100%"} height={280} />
             <Typography sx={{ mb: 2 }} color="text.secondary" >
               {data.id} Dome
             </Typography>

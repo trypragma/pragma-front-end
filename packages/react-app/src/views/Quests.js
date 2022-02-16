@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -9,60 +10,54 @@ import {
 } from "react-router-dom";
 import ReactMarkdown from 'react-markdown';
 import file from '../quests/sigma/sigmaPartOne.md';
+import fileTwo from '../quests/sigma/sigmaPartTwo.md';
+import fileThree from '../quests/sigma/sigmaPartThree.md';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import {
   BrowserRouter as Router,
     Link,
   useParams,
 } from "react-router-dom";
-// import { useHistory, useParams } from 'react-router-dom'
+import SigmaData from '../quests/sigma.json';
 
 // import {light} from 'react-syntax-highlighter/dist/esm/styles/prism'
 const drawerWidth = 240;
 
-export default function ClippedDrawer() {
+export default function Quests() {
 
     const { id } = useParams()
-
+    console.log("Quests IDParam", id);
+    
     const [markdown, setMarkdown] = useState("");
     const [pageAnchor, setPageAnchor] = useState(0);
 
     useEffect(() => {
-        fetchMarkdown()
+        fetchMarkdown(pageAnchor)
         // determinePageAnchor();
-    }, [markdown]);
+    }, [markdown, pageAnchor]);
 
     const fetchMarkdown = () => {
-        fetch(file)
+        // ToDo: Dynamically Import These
+        const mdFiles = [file, fileTwo, fileThree]
+        console.log('fetchMarkdown', mdFiles[pageAnchor])
+        fetch(mdFiles[pageAnchor])
             .then((res) => res.text())
             .then((text) => setMarkdown(text));
+        // console.log(markdown)
     }
-
-    const determinePageAnchor = () => {
-        if (pageAnchor !==0) {
-            setPageAnchor(1)
-        }
-    }
-
-    // return (
-    //     <>
-    //     <ReactMarkdown source={markdown} />
-    //     </>
-    // );
-    // }
 
     const DrawerContent = () => {
+
+        // Todo: Dynamically Sort this for other JSON / Domes
+        const sections = SigmaData.content.map(e => e.description)
+        
+        // Todo: Make this Fixed. 
         return (
            <div style={{display: 'flex', flexDirection: 'column', width: '20%', borderRight: '1px #F2F2F2 solid', paddingLeft: '2em'}}>
                 <List>
-                    <p style={{fontSize:16}}>Course Content</p>
-                    {['Introduction', 'WTF Solidity', 'First Smart Contract ', 'Testnet', 'Front End'].map((text, index) => (
-                        // <Link to={`/quests/${id}/${pageAnchor}`}>
-
-                        <ListItem button key={text}>
-                        {/* <ListItemIcon> */}
-                        {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
-                        {/* </ListItemIc/on> */}
+                    <p style={{ fontSize: 16 }}>Course Content</p>
+                    {sections.map((text, index) => (
+                        <ListItem button key={text} onClick={() => setPageAnchor(index)}>
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}
@@ -73,7 +68,7 @@ export default function ClippedDrawer() {
 
     const questContent = () => {
         return (
-            <div style={{ display: 'flex', flexDirection: 'column', width: '100%', fontSize: 12, justifyContent: 'center', padding: '10em', alignItems: 'center', height: '100%'}}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '100%', fontSize: 16, justifyContent: 'center', paddingLeft: '10em',paddingRight: '10em', alignItems: 'flex-start', height: '100%'}}>
                 <>
                     <ReactMarkdown children={markdown}
                     components={{
@@ -82,7 +77,6 @@ export default function ClippedDrawer() {
                             return !inline && match ? (
                             <SyntaxHighlighter
                                 children={String(children).replace(/\n$/, '')}
-                                // style={light}
                                 language={match[1]}
                                 PreTag="div"
                                 {...props}

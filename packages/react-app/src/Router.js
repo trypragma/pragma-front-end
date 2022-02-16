@@ -7,7 +7,7 @@ import {
 import Domes from "./views/Domes";
 import Learn from "./views/Learn";
 import Quests from "./views/Quests";
-import { Body, Button, Header, Image, Logo } from "./components";
+import { Body, Button, Header, Logo } from "./components";
 import HeaderTabs from "./components/Tabs/HeaderTabs";
 
 export default function MainRouter() {
@@ -27,6 +27,7 @@ export default function MainRouter() {
         </Switch>
       </div>
       {/* Footer */}
+      {/* <Footer/> */}
     </Router>
   );
 }
