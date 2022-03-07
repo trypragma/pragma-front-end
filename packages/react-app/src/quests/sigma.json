@@ -1,11 +1,27 @@
 {
     "name": "Sigma Dome",
     "version": 1.0,
-    "tableOfContent": [
-        "Introduction",
-        "WTF Solidity",
-        "First Smart Contract",
-        "Testnet Deployment",
-        "Front End"
+    "content":[
+        {
+            "description": "Setup",
+            "file": "/sigma/sigmaPartOne.md"
+        },
+        {
+            "description": "WTF Solidity",
+            "file": "/sigma/sigmaPartTwo.md"
+        },
+        {
+            "description": "Deployment",
+            "file": "/sigma/sigmaPartThree.md"
+        },
+        {
+            "description": "Testing Contracts",
+            "file": "/sigma/sigmaPartThree.md"
+        },
+        {
+            "description": "Front End",
+            "file": "/sigma/sigmaPartThree.md"
+        }
+
     ]
 }

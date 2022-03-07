@@ -28,14 +28,17 @@ export default function HeaderTabs() {
         // indicatorColor="#326FD7"
         // aria-label="secondary tabs example"
       >
-        <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+        {/* <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
           <HeaderTab value="learn" label="Learn"/>
-        </Link>
+        </Link> */}
         
         <Link to="/earn" style={{ textDecoration: 'none', color: 'black' }}>
           <HeaderTab value="earn" label="Earn"/>
         </Link>
 
+        <Link to="/earn" style={{ textDecoration: 'none', color: 'black' }}>
+          <HeaderTab value="earn" label="Inventory"/>
+        </Link>
          {/* <Link to="/earn" style={{ textDecoration: 'none', color: 'black' }}>
           <HeaderTab value="earn" label="Bounties"/>
         </Link> */}
