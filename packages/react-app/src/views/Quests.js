@@ -68,7 +68,7 @@ export default function Quests() {
 
     const questContent = () => {
         return (
-            <div style={{ display: 'flex', flexDirection: 'column', width: '100%', fontSize: 16, justifyContent: 'center', paddingLeft: '10em',paddingRight: '10em', alignItems: 'flex-start', height: '100%'}}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '100%', fontSize: 16, justifyContent: 'center', paddingLeft: '4em',paddingRight: '4em', alignItems: 'center', textAlign: "left", height: '100%'}}>
                 <>
                     <ReactMarkdown children={markdown}
                     components={{

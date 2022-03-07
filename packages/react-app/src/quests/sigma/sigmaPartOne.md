@@ -1,9 +1,30 @@
-# Part One: Setup (30 mins)
+
+---
+# 👋 Welcome (5 mins)
+---
+
+----
+
+[![IMAGE ALT TEXT](https://cdn.loom.com/sessions/thumbnails/4b8c7a4d3a2349ddb00b5d9754239093-with-play.gif
+)](https://www.loom.com/embed/4b8c7a4d3a2349ddb00b5d9754239093?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true
+ "Video Title")
+
+## Overview
+- In this Sigma Dome course, we will be creating a simple Salary Streaming Web3 Application. 
+- Imagine being an employee and employer sending money to each other. 
+
+By the end of the Dome, you would have 
+- Written your first Smart Contract
+- Sent your first transaction
+- Created your first web3 application
+
+You would have interfaced with:
+- Hardhat
+- Alchemy
+- WalletConnect. 
 
 ## Before joining the stream 🚨
-
 - Ensure you have a IDE such as Visual Code Studio or Sublime
--
 
 ## Context
 

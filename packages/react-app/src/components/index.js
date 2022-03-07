@@ -18,6 +18,10 @@ export const Body = styled.div`
   /* color: white; */
   /* margin-bottom: 2em; */
   display: flex;
+  padding-left: 8em;
+  padding-right: 8em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   justify-content: center;
